@@ -1,12 +1,14 @@
-=== Plugin Name ===
-Contributors: NewClarity
+=== Revostock Gallery ===
+Contributors: NewClarity, cshepherd, MeanderingCode
 Tags: revostock, video, audio, aftereffects
 Requires at least: 3.1
 Tested up to: 3.1
-Stable tag: 0.5
 License: GPLv2 or later
+Plugin URI: http://bugdepot.newclarity.net/groups/revostockgallery/
+Stable tag: 0.5
 
-Revostock gallery plugin allows authenticated Revostock users to display a gallery of Revostock assets that are available for purchase. 
+
+Revostock gallery plugin display a gallery of media assets available for purchase. 
 
 
 == Description ==
