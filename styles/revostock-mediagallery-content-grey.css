@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+/* grey Revostock styling */
+
+
+.revostock-mediagallery-item {
+	background: #E8E8E8;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding-top: 10px;
+} 
+
+
+
+
+.revostock-mediagallery-item-title div {
+	color: #000000;
+    font-family: Tahoma,,arial,sans-serif;
+    font-size: 12px;
+	line-height:100%;
+	padding-left: 5px;
+	
+	width: 100%;
+	
+}
+
+.revostock-mediagallery-item-producer div {
+    
+	color: #555555;
+	font-family: Tahoma,,arial,sans-serif;
+    font-size: 11px;
+	padding-left: 5px;
+	width: 100%;
+}
+
+
+ 
+.revostock-mediagallery-item-asset-specifics {
+   	font-family: Tahoma,,arial,sans-serif;
+    font-size: 11px;
+} 
+
+.revostock-mediagallery-item-content-type {
+				
+}
+.revostock-mediagallery-play-icon {
+	padding-left: 5px;
+}
+
+
+

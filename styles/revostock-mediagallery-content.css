@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+/* Revsostock plugin styling */
+
+.revostock-mediagallery-container {
+	clear: both;
+	padding: 20px;
+}
+	.revostock-mediagallery-items-row {
+		clear:both;
+	}
+		.revostock-mediagallery-item {
+			width: 145px;
+			float: left;
+			margin: 10px 10px;
+			padding: 5px 7px;
+			min-height: 200px;
+		}
+			.revostock-mediagallery-item-thumbnail {
+				width: 133px;
+				margin: 0 auto;
+			}
+				.revostock-mediagallery-item-thumbnail img {
+					clear: both;
+				}
+			.revostock-mediagallery-item-description {
+			}
+				.revostock-mediagallery-item-title {
+					float: left;
+					clear:both;
+					width: 100%;
+					overflow: hidden;
+				}
+					.revostock-mediagallery-item-title div {
+						width: 500px;
+					}
+				.revostock-mediagallery-item-producer {
+					float: left;
+					clear: both;
+					width: 100%;
+					overflow: hidden;
+				}
+					.revostock-mediagallery-item-producer div {
+						width: 500px;
+					}
+				
+				.revostock-mediagallery-item-asset-specifics {
+					float: left;
+					clear: both;
+				}
+			.revostock-mediagallery-item-type {
+				float: left;
+				clear: both;
+			}
+				.revostock-mediagallery-item-type img {
+					float: left;
+					margin-right: 10px;
+				}
+				.revostock-mediagallery-item-type-label {
+					float: left;
+					font-size: 11px;
+				}
+				
+.revostock-mediagallery-clear {
+	clear: both;
+}
