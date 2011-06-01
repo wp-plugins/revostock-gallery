@@ -39,23 +39,20 @@ Be sure that you've provided credentials on the Account page of the plugin's set
 
 == Screenshots ==
 
-1. This screen shot description corresponds to (revostock-01-usage.png) .
-2. This screen shot description corresponds to (revostock-02-defaults.png).
-3. This screen shot description corresponds to (revostock-03-account.png). 
+1. Plugin arguments. For example [revostock-gallery mediabox_id=29323] will return thumbnails for just those media assets listed in that mediabox (defined at Revostok.com)
+2. Handy defaults so you don't have to add them to every shortcode call.
+3. The plugin won't work unless you are a registered user (producer) at Revostock.com
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
 
 = 0.5 =
-* List versions from most recent at top to oldest at bottom.
+* Initial version
 
 == Upgrade Notice ==
 
 == Changelog ==
-= 0.9 =
+= 0.5 =
 Initial beta release
 
 
