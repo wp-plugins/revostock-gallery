@@ -25,8 +25,6 @@ A thumbnail image and description are displayed for each assset. Hover over the 
 
 This section describes how to install Revostock Gallery plugin and get it working.
 
-e.g.
-
 1. Upload `revostock-gallery` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Add your Revostock credentials to the Settings->Revostock->Account page.
@@ -34,13 +32,10 @@ e.g.
 
 == Frequently Asked Questions ==
 
-= I've installed the plugin, put the [revostock-gallery] shortcode into a post but I'm not seeing thumbnails on my page. -
+= I've installed the plugin, put the [revostock-gallery] shortcode into a post but I'm not seeing thumbnails on my page. =
 
 Be sure that you've provided credentials on the Account page of the plugin's settings.
 
-= What about foo bar? =
-
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
