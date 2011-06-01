@@ -1,4 +1,4 @@
-=== Revostock Gallery ===
+=== RevoStock Media Gallery - Wordpress Plugin ===
 Contributors: NewClarity, cshepherd, MeanderingCode
 Tags: revostock, video, audio, aftereffects
 Requires at least: 3.1
@@ -13,8 +13,9 @@ Revostock gallery plugin display a gallery of media assets available for purchas
 
 == Description ==
 
+Welcome to the RevoStock WordPress Plug-In! This Plug-In will allow you to show RevoStock Stock Media on your WordPress page!
 
-Revostock gallery plugin allows authenticated Revostock users to display a gallery of Revostock assets (movies, audio, aftereffects) that are available for purchase.
+The Revostock gallery plugin allows authenticated Revostock users to display a gallery of Revostock assets (movies, audio, aftereffects) that are available for purchase.
 A thumbnail image and description are displayed for each assset. Hover over the image for a preview. Display of the gallery is controlled by shortcode arguments or default values specified on the plugin settings page.
 
 
@@ -34,7 +35,17 @@ This section describes how to install Revostock Gallery plugin and get it workin
 
 = I've installed the plugin, put the [revostock-gallery] shortcode into a post but I'm not seeing thumbnails on my page. =
 
+
 Be sure that you've provided credentials on the Account page of the plugin's settings.
+
+= How do I get started? =
+ To get started you will need 2 items. First, you will need to be a member of RevoStock. If you don't have an account yet, visit: http://www.revostock.com/RegMember.html to create a free account.
+
+You will also need a RevoStock API Authorization. To get this, after logging in, visit: www.revostock.com/api.html
+
+Currently, API authorization is only available to RevoStock Producers (users who sell content through RevoStock) but will be open to all members soon.
+
+To get the most out of using our plug-in, make sure you sign up to be a RevoStock affiliate! http://www.revostock.com/Affiliate.html
 
 
 == Screenshots ==
