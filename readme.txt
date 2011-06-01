@@ -39,9 +39,9 @@ Be sure that you've provided credentials on the Account page of the plugin's set
 
 == Screenshots ==
 
-1. This screen shot description corresponds to revostock-01-usage.png. 
-2. This screen shot description corresponds to revostock-02-defaults.png. 
-3. This screen shot description corresponds to revostock-03-account.png. 
+1. This screen shot description corresponds to (revostock-01-usage.png) .
+2. This screen shot description corresponds to (revostock-02-defaults.png).
+3. This screen shot description corresponds to (revostock-03-account.png). 
 
 == Changelog ==
 
