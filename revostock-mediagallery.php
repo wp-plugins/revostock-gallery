@@ -1,12 +1,28 @@
 <?php
 /*
  * Plugin Name: Revostock Media Gallery Plugin
- * Plugin URI:
+ * Plugin URI: http://wordpress.org/extend/plugins/revostock-gallery/
  * Description: Display clips from Revostock on your site
+ * Text Domain: revostock_mediagallery
  * Version: 0.1
  * Author: Revostock
  * Author URI: http://www.revostock.com/
- * License:
+ * License: GPLv2
+ * 
+ *  Copyright 2011  Revostock
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License, version 2, as 
+ *  published by the Free Software Foundation.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
 if ( !class_exists( 'Revostock' ) ) {
@@ -27,6 +43,8 @@ if ( !class_exists( 'Revostock' ) ) {
 		
 		function init() {
 			add_shortcode( 'revostock-gallery', array( __CLASS__, 'shortcode_revostock' ) );
+			
+			load_plugin_textdomain( 'revostock_mediagallery', false, basename(dirname( __FILE__ ) ).'/languages' );
 			
 			wp_register_style( 'revostock_mediagallery_stylesheet', plugins_url( 'styles/revostock-mediagallery-content.css', __FILE__ ) );  // TODO if we're enabling selectable stylesheets, this needs to be handled in a function
 			wp_register_script( 'revostock_mediagallery_fetch_items_caller', plugins_url( 'scripts/revostock-mediagallery-content.js', __FILE__ ), array( 'jquery' ) );
@@ -86,25 +104,25 @@ if ( !class_exists( 'Revostock' ) ) {
 		function add_settings_pages() {
 			add_options_page( 'Revostock Plugin Options', 'Revostock', 'edit_posts', 'revostock', array( __CLASS__, 'options_page' ) );
 			
-			add_settings_section( 'revostock-mediagallery-usage', __('Using the Shortcode'), array( __CLASS__, 'settings_usage_section'), 'usage' );
+			add_settings_section( 'revostock-mediagallery-usage', __('Using the Shortcode', 'revostock_mediagallery'), array( __CLASS__, 'settings_usage_section'), 'usage' );
 			
-			add_settings_section( 'revostock-mediagallery-defaults', __('Shortcode Defaults'), array( __CLASS__, 'settings_defaults_section'), 'defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-scope', __('Producer'), array( __CLASS__, 'settings_field_scope' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-producer', __('Producer ID'), array( __CLASS__, 'settings_field_producer' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-columns', __('Columns'), array( __CLASS__, 'settings_field_columns' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-results-max', __('Limit media'), array( __CLASS__, 'settings_field_limit_media' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-css', __('Style sheet'), array( __CLASS__, 'settings_field_css' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-mediabox', __('Media Box'), array( __CLASS__, 'settings_field_mediabox' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-content-type', __('Return these media types'), array( __CLASS__, 'settings_field_content_type' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_section( 'revostock-mediagallery-defaults', __('Shortcode Defaults', 'revostock_mediagallery'), array( __CLASS__, 'settings_defaults_section'), 'defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-scope', __('Producer', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_scope' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-producer', __('Producer ID', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_producer' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-columns', __('Columns', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_columns' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-results-max', __('Limit media', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_limit_media' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-css', __('Style sheet', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_css' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-mediabox', __('Media Box', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_mediabox' ), 'defaults', 'revostock-mediagallery-defaults' );
+			add_settings_field( 'revostock-mediagallery-defaults-content-type', __('Return these media types', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_content_type' ), 'defaults', 'revostock-mediagallery-defaults' );
 			
-			add_settings_section( 'revostock-mediagallery-account', __('Revostock Account Credentials'), array( __CLASS__, 'settings_account_section'), 'account' );
-			add_settings_field( 'revostock-mediagallery-account-username', __('Account Username'), array( __CLASS__, 'settings_field_accountusername' ), 'account', 'revostock-mediagallery-account' );
-			add_settings_field( 'revostock-mediagallery-account-password', __('Account Password'), array( __CLASS__, 'settings_field_accountpassword' ), 'account', 'revostock-mediagallery-account' );
+			add_settings_section( 'revostock-mediagallery-account', __('Revostock Account Credentials', 'revostock_mediagallery'), array( __CLASS__, 'settings_account_section'), 'account' );
+			add_settings_field( 'revostock-mediagallery-account-username', __('Account Username', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_accountusername' ), 'account', 'revostock-mediagallery-account' );
+			add_settings_field( 'revostock-mediagallery-account-password', __('Account Password', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_accountpassword' ), 'account', 'revostock-mediagallery-account' );
 		}
 		
 		function options_page() {
 			if ( !current_user_can( 'edit_posts' ) ){
-				wp_die( __('You do not sufficient priviledges to access this page.') );
+				wp_die( __('You do not sufficient priviledges to access this page.', 'revostock_mediagallery') );
 			}
 			
 			?>
@@ -114,7 +132,7 @@ if ( !class_exists( 'Revostock' ) ) {
 					// Redirect to Account tab if there are no saved credentials
 					$settings = get_option( 'revostock_mediagallery_settings' );
 					if ( empty( $settings['_credentials']['username'] ) || empty( $settings['_credentials']['password'] ) ){
-						add_settings_error( 'revostock_mediagallery_settings', 'need-info', __('You must have an account with Revostock to use this plugin.  Please enter your credentials.') ); 
+						add_settings_error( 'revostock_mediagallery_settings', 'need-info', __('You must have an account with Revostock to use this plugin.  Please enter your credentials.', 'revostock_mediagallery') ); 
 						$tab = 'account';
 					} else {
 						// Render different sections depending on which tab
@@ -127,10 +145,10 @@ if ( !class_exists( 'Revostock' ) ) {
 						case 'account':
 							?>
 							<div class ="wrap" style="max-width:800px;">
-								<p><?php printf( __('Welcome to the RevoStock WordPress Plug-In! This Plug-In will allow you to show RevoStock Stock Media on your WordPress page! To get started you will need 2 items. First, you will need to be a member of RevoStock. If you don\'t have an account yet, visit: %s to create a free account.'), '<a target="_blank" href="http://www.revostock.com/RegMember.html">http://www.revostock.com/RegMember.html</a>' ); ?></p>
-								<p><?php printf( __('You will also need a RevoStock API Authorization. To get this, after logging in, visit: %s'), '<a target="_blank" href="www.revostock.com/api.html">www.revostock.com/api.html</a>' ); ?></p>
-								<p><?php _e('Currently, API authorization is only available to RevoStock Producers (users who sell content through RevoStock) but will be open to all members soon.'); ?></p>
-								<p><?php printf( __('To get the most out of using our plug-in, make sure you sign up to be a RevoStock affiliate! %s'), '<a target="_blank" href="http://www.revostock.com/Affiliate.html">http://www.revostock.com/Affiliate.html</a>'); ?> </p>
+								<p><?php printf( __('Welcome to the RevoStock WordPress Plug-In! This Plug-In will allow you to show RevoStock Stock Media on your WordPress page! To get started you will need 2 items. First, you will need to be a member of RevoStock. If you don\'t have an account yet, visit: %s to create a free account.', 'revostock_mediagallery'), '<a target="_blank" href="http://www.revostock.com/RegMember.html">http://www.revostock.com/RegMember.html</a>' ); ?></p>
+								<p><?php printf( __('You will also need a RevoStock API Authorization. To get this, after logging in, visit: %s', 'revostock_mediagallery'), '<a target="_blank" href="www.revostock.com/api.html">www.revostock.com/api.html</a>' ); ?></p>
+								<p><?php _e('Currently, API authorization is only available to RevoStock Producers (users who sell content through RevoStock) but will be open to all members soon.', 'revostock_mediagallery'); ?></p>
+								<p><?php printf( __('To get the most out of using our plug-in, make sure you sign up to be a RevoStock affiliate! %s', 'revostock_mediagallery'), '<a target="_blank" href="http://www.revostock.com/Affiliate.html">http://www.revostock.com/Affiliate.html</a>'); ?> </p>
 							</div>
 							<?php 
 					}
@@ -141,16 +159,16 @@ if ( !class_exists( 'Revostock' ) ) {
 						do_settings_sections( $tab );
 						if ( $tab != 'usage' ){ 
 							?>
-							<input name="Submit" type="submit" class="button-primary" value="<?php _e('Save Changes'); ?>" />
+							<input name="Submit" type="submit" class="button-primary" value="<?php _e('Save Changes', 'revostock_mediagallery'); ?>" />
 							<?php 
 						}
 						if ( $tab == 'defaults' ) {
 							?>
-							<input name="revostock_mediagallery_settings[reset-defaults]" type="submit" class="button-secondary" value="<?php _e('Reset Defaults'); ?>" />
+							<input name="revostock_mediagallery_settings[reset-defaults]" type="submit" class="button-secondary" value="<?php _e('Reset Defaults', 'revostock_mediagallery'); ?>" />
 							<?php 
 						} elseif ( $tab == 'account' ) {
 							?>
-							<input name="revostock_mediagallery_settings[reset-account]" type="submit" class="button-secondary" value="<?php _e('Clear info'); ?>" />
+							<input name="revostock_mediagallery_settings[reset-account]" type="submit" class="button-secondary" value="<?php _e('Clear info', 'revostock_mediagallery'); ?>" />
 							<?php 
 						}
 						?>
@@ -200,9 +218,17 @@ if ( !class_exists( 'Revostock' ) ) {
 		 */
 		function settings_usage_section(){
 			?>
-			<p><?php _e('A gallery of media items may be inserted into a page or post by using the shortcode');?> [revostock-gallery].<br/>
-				<?php _e('The parameters below may be added to specify different settings than are saved on the Defaults tab (shown above).'); ?></p>
-			<h3><?php _e('Shorcode parameters' ); ?></h3>
+			<p><?php _e('A gallery of media items may be inserted into a page or post by using the shortcode', 'revostock_mediagallery');?> [revostock-gallery].<br/>
+				<?php _e('The parameters below may be added to specify different settings than are saved on the Defaults tab (shown above).', 'revostock_mediagallery'); ?></p>
+			<p>
+				<?php printf(__('For example, say you have "Video" selected for "Return these media types" on the Defaults tab and you use the shortcode %1$s.  '
+							.'This would display a gallery containing video results of a search for "%2$s" and "&3$s".  If you wanted to return all types, regardless of your default setting, '
+							.'you could specify that: %4$s.', 'revostock_mediagallery'), '[revostock-gallery search=forest,moon]', 'forest', 'moon', '[revostock-gallery search=forest,moon content_type=all]' ); ?>
+			</p>
+			<p>
+				<?php printf(__('Note that "%1$s", "%2$s", and "%3$s" all require the numeric ID of that item on Revostock.', 'revostock_mediagallery'), 'asset_id', 'mediabox_id', 'producer_id');?>
+			</p>
+			<h3><?php _e('Shorcode parameters' , 'revostock_mediagallery'); ?></h3>
 			<?php 
 			include( 'settings-page-usage.html' );
 		}
@@ -212,13 +238,10 @@ if ( !class_exists( 'Revostock' ) ) {
 		 */
 		function settings_defaults_section(){
 			if ( !current_user_can( 'manage_options' ) ) {
-				wp_die( __('You are not authorized to change settings for this plugin.') );
+				wp_die( __('You are not authorized to change settings for this plugin.', 'revostock_mediagallery') );
 			}
 			?>
-			<p><?php _e('You’ll use a shortcode in your page or post to retrieve asset thumbnails — the small images that'
-							.'represent your audio, video, and after effects ﬁles. You can change any of these values for a'
-							.'particular shortcode expression. If you don’t provide a value in the shortcode expression we’ll'
-							.'use these values as a default.' ); ?></p>
+			<p><?php _e('You’ll use a shortcode in your page or post to retrieve asset thumbnails — the small images that represent your audio, video, and after effects ﬁles. You can change any of these values for a particular shortcode expression. If you don’t provide a value in the shortcode expression we’ll use these values as a default.', 'revostock_mediagallery'); ?></p>
 			<?php 
 		}
 		
@@ -230,7 +253,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			$checked = ( $defaults['scope'] == "producer" ) ? 'checked="checked" ' : '';
 			?>
 			<input id="revostock-mediagallery-defaults-scope" name="revostock_mediagallery_settings[_defaults][scope]" type="checkbox" <?php echo $checked; ?>/>
-			<span class="description"><?php _e('Show only my Revostock media assets')?></span>
+			<span class="description"><?php _e('Show only my Revostock media assets', 'revostock_mediagallery')?></span>
 			<?php 
 		}
 		
@@ -241,7 +264,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			$defaults = self::get_shortcode_defaults();
 			?>
 			<input id="revostock-mediagallery-defaults-producer" name="revostock_mediagallery_settings[_defaults][producer_id]" size="10" type="text" value="<?php echo $defaults['producer_id'];?>" /><br />
-			<span class="description"><?php _e('The ID of the producer to show if the previous setting is active')?></span>
+			<span class="description"><?php _e('The ID of the producer to show if the previous setting is active', 'revostock_mediagallery')?></span>
 			<?php 
 		}
 		
@@ -280,12 +303,12 @@ if ( !class_exists( 'Revostock' ) ) {
 			foreach ( $styles as $key => $choice ){
 				$checked = ( $key == $defaults['css_color_scheme'] ) ? 'checked="checked" ' : '';
 				?>
-				<input id="revostock-mediagallery-defaults-stylesheet-<?php echo $key; ?>" name="revostock_mediagallery_settings[_defaults][css_color_scheme]" type="radio" value="<?php echo $key; ?>" <?php echo $checked; ?>/><?php _e($choice);?><br />
+				<input id="revostock-mediagallery-defaults-stylesheet-<?php echo $key; ?>" name="revostock_mediagallery_settings[_defaults][css_color_scheme]" type="radio" value="<?php echo $key; ?>" <?php echo $checked; ?>/><?php _e($choice, 'revostock_mediagallery');?><br />
 				<?php 
 			}
 			?>
 			&nbsp;<br /><label>CSS prefix  <input id="revostock-mediagallery-defaults-css" name="revostock_mediagallery_settings[_defaults][css_prefix]" type="text" size="25" value="<?php echo $defaults['css_prefix']; ?>" /></label><br />
-			<span class="description"><?php _e('Space-seperated class names to add to the gallery container'); ?></span>
+			<span class="description"><?php _e('Space-seperated class names to add to the gallery container', 'revostock_mediagallery'); ?></span>
 			<?php 
 		}
 		
@@ -296,7 +319,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			$defaults = self::get_shortcode_defaults();
 			?>
 			<input id="revostock-mediagallery-defaults-mediabox" name="revostock_mediagallery_settings[_defaults][mediabox_id]" size="10" type="text" value="<?php echo $defaults['mediabox_id']; ?>" /><br />
-			<span class="description"><?php _e('The ID of the mediabox to display'); ?></span>
+			<span class="description"><?php _e('The ID of the mediabox to display', 'revostock_mediagallery'); ?></span>
 			<?php 
 		}
 		
@@ -315,7 +338,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			foreach ( $types as $key => $choice ){
 				$checked = ( $key == $defaults['content_type'] ) ? 'checked="checked" ' : '';
 				?>
-				<input id="revostock-mediagallery-defaults-content-type" name="revostock_mediagallery_settings[_defaults][content_type]" type="radio" value="<?php echo $key; ?>" <?php echo $checked; ?>/><?php _e($choice);?><br />
+				<input id="revostock-mediagallery-defaults-content-type" name="revostock_mediagallery_settings[_defaults][content_type]" type="radio" value="<?php echo $key; ?>" <?php echo $checked; ?>/><?php _e($choice, 'revostock_mediagallery');?><br />
 				<?php 
 			}
 		}
@@ -325,10 +348,10 @@ if ( !class_exists( 'Revostock' ) ) {
 		 */
 		function settings_account_section(){
 			if ( !current_user_can( 'manage_options' ) ){
-				wp_die( __('You are not authorized to change settings for this plugin.') );
+				wp_die( __('You are not authorized to change settings for this plugin.', 'revostock_mediagallery') );
 			}
 			?>
-			<p><?php _e('Enter your Revostock account information here.') ?></p>
+			<p><?php _e('Enter your Revostock account information here.', 'revostock_mediagallery') ?></p>
 			<?php 
 		}
 		
@@ -353,7 +376,7 @@ if ( !class_exists( 'Revostock' ) ) {
 		
 		function settings_validate( $input ){
 			if ( !current_user_can( 'manage_options' ) ){
-				wp_die( __('You do not have sufficient priviledges to do that.') );
+				wp_die( __('You do not have sufficient priviledges to do that.', 'revostock_mediagallery') );
 			}
 			
 			$settings = get_option( 'revostock_mediagallery_settings' );
@@ -376,7 +399,7 @@ if ( !class_exists( 'Revostock' ) ) {
 						)) )
 						$settings['_credentials'] = $input['_credentials'];
 				} else {
-					add_settings_error( 'revostock_mediagallery_settings', 'user-error', __('You must enter both a username and a password') );
+					add_settings_error( 'revostock_mediagallery_settings', 'user-error', __('You must enter both a username and a password', 'revostock_mediagallery') );
 				}
 			}
 			
@@ -421,7 +444,7 @@ if ( !class_exists( 'Revostock' ) ) {
 						if ( $value == $valid[$key] ){
 							$settings['_defaults'][$key] = $valid[$key];
 						} else {
-							add_settings_error( 'revostock_mediagallery_settings', 'input-error', __('You need to enter a valid value for "'.$readable[$key].'".') );
+							add_settings_error( 'revostock_mediagallery_settings', 'input-error', __('You need to enter a valid value for "'.$readable[$key].'".', 'revostock_mediagallery') );
 						}
 					}
 				}
@@ -691,7 +714,9 @@ if ( !class_exists( 'Revostock' ) ) {
 							default:
 								$asset_spec = '';
 						}
-						// FileType parsing for readable label
+						// FileType parsing for readable label and icon filename
+						//		Note: icon filename matches API item key "FileType" value except where set in the switch tree below
+						$icon = $item['FileType'];
 						switch ( $item['FileType'] ){
 							case 'video':
 								$type = 'Stock Video Footage';
@@ -703,6 +728,7 @@ if ( !class_exists( 'Revostock' ) ) {
 										break;
 									case '79':
 										$type = 'Sound Effects';
+										$icon = 'soundeffects';
 										break;
 									default:
 										$type = 'Stock Audio';
@@ -713,13 +739,14 @@ if ( !class_exists( 'Revostock' ) ) {
 								break;
 							case 'motion':
 								$type = 'Apple Motion Template';
+								$icon = 'applemotion';
 								break;
 							default:
 								$type = '';
 						}
 						
 						// Item link
-						$itemlink = '<a target="_blank" href="http://www.revostock.com/FileCloseup.html?&ID='.$item['ID'].'">';
+						$itemlink = '<a target="_blank" href="'.$item['ProductURL'].'">';
 						
 						// Producer link
 						$producerlink = '<a target="_blank" href="http://www.revostock.com/ViewProfile.html?&ID='.$item['Producer']['ID'].'">';
@@ -733,7 +760,7 @@ if ( !class_exists( 'Revostock' ) ) {
 								$output .= '<div class="revostock-mediagallery-item-asset-specifics">'.$asset_spec.'</div>';
 							$output .= '</div>';
 							$output .= '<div class="revostock-mediagallery-item-type revostock-mediagallery-clear">';
-								$output .= '<img src="'.plugins_url('images/', __FILE__ ).$item['FileType'].'.png" class="revostock-mediagallery-item-media-icon" />';
+								$output .= '<img src="'.plugins_url('images/', __FILE__ ).$icon.'.png" class="revostock-mediagallery-item-media-icon" />';
 								$output .= '<div class="revostock-mediagallery-item-type-label">'.$type.'</div>';
 							$output .= '</div>';
 						$output .= '</div>';
@@ -741,7 +768,7 @@ if ( !class_exists( 'Revostock' ) ) {
 					$output .= '<div class="revostock-mediagallery-clear"></div></div>';
 				}
 			} else {
-				$output = __('The Revostock plugin could not return a list of media assets. Please refresh and try again');
+				$output = __('The Revostock plugin could not return a list of media assets. Please refresh and try again', 'revostock_mediagallery');
 			}
 			
 			echo $output;
@@ -752,7 +779,7 @@ if ( !class_exists( 'Revostock' ) ) {
 		 * API functions
 		 */
 		function api_request( $action, $args = null ){
-			$base_url = 'https://revostock.com/rest';
+			$base_url = 'http://revostock.com/rest';
 			$settings = get_option( 'revostock_mediagallery_settings' );
 			$credentials = base64_encode( $settings['_credentials']['username'].':'.$settings['_credentials']['password'] );
 			$remote_request_args = array( 'headers' => array( 'Authorization'=>'Basic '.$credentials ) ); 
@@ -765,18 +792,18 @@ if ( !class_exists( 'Revostock' ) ) {
 						if ( !is_wp_error( $response ) ){
 							switch ( $response['response']['code'] ) {
 								case '401':
-									add_settings_error( 'revostock_mediagallery_settings', 'user-error', __('Your username and password combination were not recognized by Revostock') );
+									add_settings_error( 'revostock_mediagallery_settings', 'user-error', __('Your username and password combination were not recognized by Revostock', 'revostock_mediagallery') );
 									return false;
 								case '200':
 									return true;
 							}
 							
 						} else {
-							add_settings_error( 'revostock_mediagallery_settings', 'local-error', __('There was a problem reaching Revostock.<br />Please try again later or contact your site administrator.' ) );
+							add_settings_error( 'revostock_mediagallery_settings', 'local-error', __('There was a problem reaching Revostock.<br />Please try again later or contact your site administrator.' , 'revostock_mediagallery') );
 							return false;
 						}
 					} else {
-						add_settings_error( 'revostock_mediagallery_settings', 'local-error', __('Something went wrong') );
+						add_settings_error( 'revostock_mediagallery_settings', 'local-error', __('Something went wrong', 'revostock_mediagallery') );
 						return false;
 					}
 					break;

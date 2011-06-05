@@ -1,51 +1,105 @@
-@CHARSET "UTF-8";
-
-/* grey Revostock styling */
-
-
-.revostock-mediagallery-item {
-	background: #E8E8E8;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	padding-top: 10px;
-} 
-
-
-
-
-.revostock-mediagallery-item-title div {
+/*grey Revostock styling*/
+.revostock-mediagallery-item
+{
+	background: #C8C8C8;
+	padding-top: 12px;
+	margin-left: 5px;
+	padding-left: 0px;
+	padding-right: 11px;
+	border: 0px solid #000000;
+	padding: 5px 13px 0px 5px;
+	margin-bottom: 1px;
+	border-left: 0px solid #000000;
+	overflow: hidden;
+}
+.revostock-mediagallery-item A IMG
+{
+	background: #999999;
+	border-color: #FFFFFF;
+	border-width: 5px;
+	border-style: solid;
+	max-height: 75px;
+	max-width: 130px;
+}
+.revostock-mediagallery-item-title DIV
+{
+	color: #0000FF;
+	font-family: Tahoma, arial, sans-serif;
+	font-size: 12px;
+	line-height: 100%;
+	padding-left: 5px;
+	width: 136%;
+	max-height: 10pt;
+}
+.revostock-mediagallery-item-title A:hover
+{
 	color: #000000;
-    font-family: Tahoma,,arial,sans-serif;
-    font-size: 12px;
-	line-height:100%;
-	padding-left: 5px;
-	
-	width: 100%;
-	
 }
-
-.revostock-mediagallery-item-producer div {
-    
+.revostock-mediagallery-item-title A
+{
+	color: #000000;
+	width: 500px;
+	text-decoration: none;
+}
+.revostock-mediagallery-item-producer DIV
+{
 	color: #555555;
-	font-family: Tahoma,,arial,sans-serif;
-    font-size: 11px;
-	padding-left: 5px;
-	width: 100%;
+	font-family: Tahoma, arial, sans-serif;
+	font-size: 11px;
+	width: 500px;
 }
-
-
- 
-.revostock-mediagallery-item-asset-specifics {
-   	font-family: Tahoma,,arial,sans-serif;
-    font-size: 11px;
-} 
-
-.revostock-mediagallery-item-content-type {
-				
+DIV.revostock-mediagallery-item-producer A
+{
+	color: #000000;
+	text-decoration: none;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 10pt;
+	margin-right: 0;
+	margin-left: 5px;
 }
-.revostock-mediagallery-play-icon {
-	padding-left: 5px;
+.revostock-mediagallery-item-asset-specifics
+{
+	font-family: Tahoma, arial, sans-serif;
+	font-size: 10pt;
+	width: 143px;
+	text-align: right;
 }
-
-
-
+.revostock-mediagallery-item-content-type
+{
+}
+.revostock-mediagallery-item-thumbnail
+{
+}
+.revostock-mediagallery-item-description
+{
+}
+.revostock-mediagallery-item-producer
+{
+	width: 500px;
+}
+.revostock-mediagallery-item-type
+{
+	margin-left: -10px;
+	margin-botom: 0px;
+	height: 25px;
+	width: 168px;
+	background-color: #D7D7D7;
+	padding-top: 7px;
+	margin-right: -4px;
+}
+.revostock-mediagallery-item-type IMG
+{
+}
+.revostock-mediagallery-item-media-icon
+{
+	padding: 0px 0px 0px 15px;
+	border: 0px solid #008000;
+}
+.revostock-mediagallery-item-type-label
+{
+	color: #000000;
+	font-family: tahoma, arial;
+	font-size: 7.5pt;
+	text-align: right;
+	margin-left: 13px;
+}
