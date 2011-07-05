@@ -1,5 +1,5 @@
-=== RevoStock Media Gallery - Wordpress Plugin ===
-Contributors: NewClarity, cshepherd, MeanderingCode
+=== RevoStock Media Gallery ===
+Contributors: NewClarity, cshepherd, MeanderingCode, MikeSchinkel, marnafriedman
 Tags: revostock, video, audio, aftereffects
 Requires at least: 3.1
 Tested up to: 3.1
@@ -47,7 +47,15 @@ Currently, API authorization is only available to RevoStock Producers (users who
 
 To get the most out of using our plug-in, make sure you sign up to be a RevoStock affiliate! http://www.revostock.com/Affiliate.html
 
+= Where do I go for support? =
 
+ - Ask questions or report bugs at [http://www.revostock.com/Helpdesk.html](http://www.revostock.com/Helpdesk.html),
+ 
+ = Who developed this plugin? =
+  -Sean Leonard- Development
+ - Carol Shepherd- Technical project management, wireframes
+ - Marna Friedman- QA and Project management
+ - Mike Schinkel- Client engagement and high level architecture
 == Screenshots ==
 
 1. Plugin arguments. For example [revostock-gallery mediabox_id=29323] will return thumbnails for just those media assets listed in that mediabox (defined at Revostok.com)

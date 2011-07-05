@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Revostock Media Gallery Plugin
- * Plugin URI: http://wordpress.org/extend/plugins/revostock-gallery/
+ * Plugin URI: http://www.revostock.com/wordpress
  * Description: Display clips from Revostock on your site
  * Text Domain: revostock_mediagallery
  * Version: 0.1
@@ -146,7 +146,7 @@ if ( !class_exists( 'Revostock' ) ) {
 							?>
 							<div class ="wrap" style="max-width:800px;">
 								<p><?php printf( __('Welcome to the RevoStock WordPress Plug-In! This Plug-In will allow you to show RevoStock Stock Media on your WordPress page! To get started you will need 2 items. First, you will need to be a member of RevoStock. If you don\'t have an account yet, visit: %s to create a free account.', 'revostock_mediagallery'), '<a target="_blank" href="http://www.revostock.com/RegMember.html">http://www.revostock.com/RegMember.html</a>' ); ?></p>
-								<p><?php printf( __('You will also need a RevoStock API Authorization. To get this, after logging in, visit: %s', 'revostock_mediagallery'), '<a target="_blank" href="www.revostock.com/api.html">www.revostock.com/api.html</a>' ); ?></p>
+								<p><?php printf( __('You will also need a RevoStock API Authorization. To get this, after logging in, visit: %s', 'revostock_mediagallery'), '<a target="_blank" href="http://www.revostock.com/api.html">www.revostock.com/api.html</a>' ); ?></p>
 								<p><?php _e('Currently, API authorization is only available to RevoStock Producers (users who sell content through RevoStock) but will be open to all members soon.', 'revostock_mediagallery'); ?></p>
 								<p><?php printf( __('To get the most out of using our plug-in, make sure you sign up to be a RevoStock affiliate! %s', 'revostock_mediagallery'), '<a target="_blank" href="http://www.revostock.com/Affiliate.html">http://www.revostock.com/Affiliate.html</a>'); ?> </p>
 							</div>
@@ -751,12 +751,21 @@ if ( !class_exists( 'Revostock' ) ) {
 						// Producer link
 						$producerlink = '<a target="_blank" href="http://www.revostock.com/ViewProfile.html?&ID='.$item['Producer']['ID'].'">';
 						
+						// Shorten the title and producer names and add a ... 
+						$itemshortname = substr( $item['Title'], 0, 18);
+						if ( strlen($item['Title'] ) > 18 )
+							$itemshortname .='...';
+							
+						$producershortname =  substr ($item['Producer']['username'], 0, 8);
+						if ( strlen ($item['Producer']['username']) > 8)
+							$producershortname .= '...';
+						
 						// item container
 						$output .= '<div id="'.$item['ID'].'" class="revostock-mediagallery-item">';
 							$output .= '<div class="revostock-mediagallery-item-thumbnail">'.$itemlink.'<img src="'.$item['ThumbURL'].'" onmouseover="showhover(\'http://www.revostock.com/popupplugin.php?ID='.$item['ID'].'\')" onmouseout="hidetrail()" /></a></div>';
 							$output .= '<div class="revostock-mediagallery-item-description revostock-mediagallery-clear">';
-								$output .= '<div class="revostock-mediagallery-item-title"><div>'.$itemlink.$item['Title'].'</a></div></div>';
-								$output .= '<div class="revostock-mediagallery-item-producer"><div>'.$producerlink.'by&nbsp;'.$item['Producer']['username'].'</a></div></div>';
+								$output .= '<div class="revostock-mediagallery-item-title"><div>'.$itemlink.$itemshortname.'</a></div></div>';
+								$output .= '<div class="revostock-mediagallery-item-producer"><div>'.$producerlink.'By&nbsp;'.$producershortname.'</a></div></div>';
 								$output .= '<div class="revostock-mediagallery-item-asset-specifics">'.$asset_spec.'</div>';
 							$output .= '</div>';
 							$output .= '<div class="revostock-mediagallery-item-type revostock-mediagallery-clear">';
@@ -779,7 +788,7 @@ if ( !class_exists( 'Revostock' ) ) {
 		 * API functions
 		 */
 		function api_request( $action, $args = null ){
-			$base_url = 'http://revostock.com/rest';
+			$base_url = 'https://revostock.com/rest';
 			$settings = get_option( 'revostock_mediagallery_settings' );
 			$credentials = base64_encode( $settings['_credentials']['username'].':'.$settings['_credentials']['password'] );
 			$remote_request_args = array( 'headers' => array( 'Authorization'=>'Basic '.$credentials ) ); 
@@ -788,7 +797,7 @@ if ( !class_exists( 'Revostock' ) ) {
 				case 'validate':
 					if ( isset( $args['username'] ) && isset( $args['password'] ) ){
 						$remote_request_args = array( 'headers' => array( 'Authorization'=>'Basic '.base64_encode( $args['username'].':'.$args['password'] ) ) );
-						$response = wp_remote_request( $base_url.'/new/video?rpp=1', $remote_request_args );
+						$response = wp_remote_get( $base_url.'/new/video?rpp=1', $remote_request_args );
 						if ( !is_wp_error( $response ) ){
 							switch ( $response['response']['code'] ) {
 								case '401':
@@ -808,7 +817,7 @@ if ( !class_exists( 'Revostock' ) ) {
 					}
 					break;
 				case 'fetch_items':
-					$response = wp_remote_request( $base_url.'/'.$args['request'], $remote_request_args );
+					$response = wp_remote_get( $base_url.'/'.$args['request'], $remote_request_args );
 					if ( !is_wp_error( $response ) ) {
 						switch ( $response['response']['code'] ) {
 							case '200':
