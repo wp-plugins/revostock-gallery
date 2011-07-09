@@ -4,7 +4,7 @@ Tags: revostock, video, audio, aftereffects
 Requires at least: 3.1
 Tested up to: 3.1
 License: GPLv2 or later
-Plugin URI: http://bugdepot.newclarity.net/groups/revostockgallery/
+Plugin URI: http://revostock.com/wordpress.html
 Stable tag: 0.5
 
 
