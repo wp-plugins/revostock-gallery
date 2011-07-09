@@ -5,7 +5,7 @@ Requires at least: 3.1
 Tested up to: 3.1
 License: GPLv2 or later
 Plugin URI: http://revostock.com/wordpress.html
-Stable tag: 0.9.10
+Stable tag: 0.9.11
 
 
 Revostock gallery plugin display a gallery of media assets available for purchase. 
