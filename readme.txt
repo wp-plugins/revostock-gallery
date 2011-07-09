@@ -4,8 +4,8 @@ Tags: revostock, video, audio, aftereffects
 Requires at least: 3.1
 Tested up to: 3.1
 License: GPLv2 or later
-Plugin URI: http://bugdepot.newclarity.net/groups/revostockgallery/
-Stable tag: 0.5
+Plugin URI: http://revostock.com/wordpress.html
+Stable tag: 0.9.11
 
 
 Revostock gallery plugin display a gallery of media assets available for purchase. 
@@ -52,7 +52,7 @@ To get the most out of using our plug-in, make sure you sign up to be a RevoStoc
  - Ask questions or report bugs at [http://www.revostock.com/Helpdesk.html](http://www.revostock.com/Helpdesk.html),
  
  = Who developed this plugin? =
-  -Sean Leonard- Development
+ - Sean Leonard- Development
  - Carol Shepherd- Technical project management, wireframes
  - Marna Friedman- QA and Project management
  - Mike Schinkel- Client engagement and high level architecture
@@ -62,15 +62,14 @@ To get the most out of using our plug-in, make sure you sign up to be a RevoStoc
 2. Handy defaults so you don't have to add them to every shortcode call.
 3. The plugin won't work unless you are a registered user (producer) at Revostock.com
 
-== Changelog ==
 
-
-= 0.5 =
-* Initial version
 
 == Upgrade Notice ==
 
 == Changelog ==
+= 0.9.10 =
+Updated styling
+
 = 0.5 =
 Initial beta release
 

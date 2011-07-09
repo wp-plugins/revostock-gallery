@@ -1,51 +1,1 @@
-@CHARSET "UTF-8";
-
-/* black & white Revostock styling */
-
-
-.revostock-mediagallery-item {
-	background: white;
-	border-color: black;
-	border-width: 5px;
-	border-style:double;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	padding-top: 10px;
-} 
-
-
-
-
-.revostock-mediagallery-item-title div {
-	color: black;
-    font-family: Tahoma,,arial,sans-serif;
-    font-size: 12px;
-	line-height:100%;
-	padding-left: 5px;
-	
-	width: 100%;
-	
-}
-
-.revostock-mediagallery-item-producer div {
-    
-	color: black;
-	font-family: Tahoma,,arial,sans-serif;
-    font-size: 11px;
-	padding-left: 5px;
-	width: 100%;
-}
-
-
- 
-.revostock-mediagallery-item-asset-specifics {
-   	font-family: Tahoma,,arial,sans-serif;
-    font-size: 11px;
-} 
-
-.revostock-mediagallery-item-content-type {
-				
-}
-.revostock-mediagallery-play-icon {
-	padding-left: 5px;
-}
+@CHARSET "UTF-8";/* black & white Revostock styling */ .revostock-mediagallery-item{	background: #222222;	border: 1px solid #C0C0C0;	-moz-border-radius: 4px;}.revostock-mediagallery-item-thumbnail{	border: 1px solid #C0C0C0;                 background: #FFFFFF}.revostock-mediagallery-item-thumbnail a{	border-bottom: 0px solid #000000;	border: 0px solid #000000;}.revostock-mediagallery-item-thumbnail img{	border: 7px solid #FFFFFF;}.revostock-mediagallery-item a img{	background: #333333;	border-color: #C0C0C0;}.revostock-mediagallery-item-title a:hover{	color: #EFEFEF;}.revostock-mediagallery-item-title a{	color: #EFEFEF;}div.revostock-mediagallery-item-producer a{	color: #EFEFEF;}.revostock-mediagallery-item-type{	background-color: #E6E6E6;}.revostock-mediagallery-item-media-icon{	border: 0px solid #008000;}.revostock-mediagallery-item-type-label{	color: #000000;}
