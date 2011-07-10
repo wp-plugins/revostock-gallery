@@ -4,7 +4,7 @@
  * Plugin URI: http://www.revostock.com/wordpress
  * Description: Display clips from Revostock on your site
  * Text Domain: revostock_mediagallery
- * Version: 0.1
+ * Version: 0.9.13
  * Author: Revostock
  * Author URI: http://www.revostock.com/
  * License: GPLv2
@@ -752,12 +752,12 @@ if ( !class_exists( 'Revostock' ) ) {
 						$producerlink = '<a target="_blank" href="http://www.revostock.com/ViewProfile.html?&ID='.$item['Producer']['ID'].'">';
 						
 						// Shorten the title and producer names and add a ... 
-						$itemshortname = substr( $item['Title'], 0, 18);
-						if ( strlen($item['Title'] ) > 18 )
+						$itemshortname = substr( $item['Title'], 0,23);
+						if ( strlen($item['Title'] ) > 23 )
 							$itemshortname .='...';
 							
-						$producershortname =  substr ($item['Producer']['username'], 0, 8);
-						if ( strlen ($item['Producer']['username']) > 8)
+						$producershortname =  substr ($item['Producer']['username'], 0, 23);
+						if ( strlen ($item['Producer']['username']) > 23)
 							$producershortname .= '...';
 						
 						// item container
@@ -766,11 +766,13 @@ if ( !class_exists( 'Revostock' ) ) {
 							$output .= '<div class="revostock-mediagallery-item-description revostock-mediagallery-clear">';
 								$output .= '<div class="revostock-mediagallery-item-title"><div>'.$itemlink.$itemshortname.'</a></div></div>';
 								$output .= '<div class="revostock-mediagallery-item-producer"><div>'.$producerlink.'By&nbsp;'.$producershortname.'</a></div></div>';
-								$output .= '<div class="revostock-mediagallery-item-asset-specifics">'.$asset_spec.'</div>';
+								// Removed by Craig CAS
+								//$output .= '<div class="revostock-mediagallery-item-asset-specifics">'.$asset_spec.'</div>';
 							$output .= '</div>';
 							$output .= '<div class="revostock-mediagallery-item-type revostock-mediagallery-clear">';
 								$output .= '<img src="'.plugins_url('images/', __FILE__ ).$icon.'.png" class="revostock-mediagallery-item-media-icon" />';
-								$output .= '<div class="revostock-mediagallery-item-type-label">'.$type.'</div>';
+								
+								 $output .= '<div class="revostock-mediagallery-item-type-label">'.$type.'</div>';
 							$output .= '</div>';
 						$output .= '</div>';
 					}

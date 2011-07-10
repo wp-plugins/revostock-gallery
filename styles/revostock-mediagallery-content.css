@@ -1,65 +1,129 @@
-@CHARSET "UTF-8";
-/* Revsostock plugin styling */
-
-.revostock-mediagallery-container {
+/*Revsostock plugin styling*/
+.revostock-mediagallery-container
+{
 	clear: both;
 	padding: 20px;
 }
-	.revostock-mediagallery-items-row {
-		clear:both;
-	}
-		.revostock-mediagallery-item {
-			width: 145px;
-			float: left;
-			margin: 10px 10px;
-			padding: 5px 7px;
-			min-height: 180px;
-		}
-			.revostock-mediagallery-item-thumbnail {
-				width: 133px;
-				margin: 0 auto;
-			}
-				.revostock-mediagallery-item-thumbnail img {
-					clear: both;
-				}
-			.revostock-mediagallery-item-description {
-			}
-				.revostock-mediagallery-item-title {
-					float: left;
-					clear:both;
-					width: 100%;
-					overflow: hidden;
-				}
-					.revostock-mediagallery-item-title div {
-						width: 500px;
-					}
-				.revostock-mediagallery-item-producer {
-					float: left;
-					clear: both;
-					width: 100%;
-					overflow: hidden;
-				}
-					.revostock-mediagallery-item-producer div {
-						width: 500px;
-					}
-				
-				.revostock-mediagallery-item-asset-specifics {
-					float: left;
-					clear: both;
-				}
-			.revostock-mediagallery-item-type {
-				float: left;
-				clear: both;
-			}
-				.revostock-mediagallery-item-type img {
-					float: left;
-					margin-right: 10px;
-				}
-				.revostock-mediagallery-item-type-label {
-					float: left;
-					font-size: 11px;
-				}
-				
-.revostock-mediagallery-clear {
+.revostock-mediagallery-items-row
+{
+	clear: both;
+}
+.revostock-mediagallery-item
+{
+	width: 145px;
+	float: left;
+	margin: 10px;
+	padding: 5px 5px 0px 5px;
+	min-height: 10px;
+	margin-left: 5px;
+	margin-bottom: 1px;
+	overflow: hidden;
+	font-family: Tahoma, Arial, Geneva, sans-serif;
+	font-size: 10pt;
+}
+.revostock-mediagallery-item-thumbnail
+{
+	width: 133px;
+	margin: 0 auto;
+	max-height: 80px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 6px;
+}
+.revostock-mediagallery-item-thumbnail IMG
+{
+	min-width: 130px;
+	clear: both;
+}
+.revostock-mediagallery-item-thumbnail A IMG
+{
+	border-width: 1px;
+	border-style: solid;
+	max-height: 75px;
+	max-width: 130px;
+}
+.revostock-mediagallery-item-title
+{
+	font-family: Tahoma, Arial, Geneva, sans-serif;
+	font-size: 11px;
+	float: left;
+	clear: both;
+	width: 100%;
+	margin-top: 3px;
+	overflow: hidden;
+	text-transform: capitalize;
+}
+.revostock-mediagallery-item-title A
+{
+	width: 500px;
+	text-decoration: none;
+}
+.revostock-mediagallery-item-title DIV
+{
+	padding-left: 5px;
+	width: 500px;
+	max-height: 15pt;
+}
+.revostock-mediagallery-item-producer
+{
+	float: left;
+	clear: both;
+	width: 500px;
+	overflow: hidden;
+	font-size: 10px;
+	
+}
+DIV.revostock-mediagallery-item-producer A
+{
+	text-decoration: none;
+	margin-right: 0;
+	margin-left: 5px;
+}
+.revostock-mediagallery-item-producer DIV
+{
+	width: 500px;
+}
+.revostock-mediagallery-item-asset-specifics
+{
+	font-family: Tahoma, Arial, Geneva, sans-serif;
+	font-size: 7.5pt;
+	float: left;
+	clear: both;
+	width: 143px;
+	line-height: 100%;
+	text-align: right;
+	margin-top: -15px;
+}
+.revostock-mediagallery-item-type
+{
+	margin-left: -17px;
+	margin-bottom: 0px;
+	height: 25px;
+	width: 168px;
+	padding-top: 4px;
+	margin-top: 44px;
+	margin-right: -4px;
+	clear: both;
+}
+.revostock-mediagallery-item-type IMG
+{
+	float: left;
+}
+.revostock-mediagallery-item-media-icon
+{
+	padding: 0px 0px 0px 15px;
+}
+.revostock-mediagallery-item-type-label
+{
+	float: left;
+	margin-right: 13px;
+	font-family: Tahoma, Arial, Geneva, sans-serif;
+	font-size: 7.5pt;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+.revostock-mediagallery-clear
+{
 	clear: both;
 }
