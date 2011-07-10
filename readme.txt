@@ -2,10 +2,10 @@
 Contributors: NewClarity, cshepherd, MeanderingCode, MikeSchinkel, marnafriedman
 Tags: revostock, video, audio, aftereffects
 Requires at least: 3.1
-Tested up to: 3.1
+Tested up to: 3.2
 License: GPLv2 or later
 Plugin URI: http://revostock.com/wordpress.html
-Stable tag: 0.9.11
+Stable tag: 0.9.12
 
 
 Revostock gallery plugin display a gallery of media assets available for purchase. 
@@ -36,7 +36,7 @@ This section describes how to install Revostock Gallery plugin and get it workin
 = I've installed the plugin, put the [revostock-gallery] shortcode into a post but I'm not seeing thumbnails on my page. =
 
 
-Be sure that you've provided credentials on the Account page of the plugin's settings.
+Be sure that you've provided credentials on the Account page of the plugin's settings. You'll need both a userid at Revostock.com and an API key.
 
 = How do I get started? =
  To get started you will need 2 items. First, you will need to be a member of RevoStock. If you don't have an account yet, visit: http://www.revostock.com/RegMember.html to create a free account.
