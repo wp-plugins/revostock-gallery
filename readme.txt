@@ -51,11 +51,13 @@ To get the most out of using our plug-in, make sure you sign up to be a RevoStoc
 
  - Ask questions or report bugs at [http://www.revostock.com/Helpdesk.html](http://www.revostock.com/Helpdesk.html),
  
- = Who developed this plugin? =
+= Who developed this plugin? =
  - Sean Leonard- Development
  - Carol Shepherd- Technical project management, wireframes
  - Marna Friedman- QA and Project management
  - Mike Schinkel- Client engagement and high level architecture
+ 
+ 
 == Screenshots ==
 
 1. Plugin arguments. For example [revostock-gallery mediabox_id=29323] will return thumbnails for just those media assets listed in that mediabox (defined at Revostok.com)
@@ -65,8 +67,15 @@ To get the most out of using our plug-in, make sure you sign up to be a RevoStoc
 
 
 == Upgrade Notice ==
+= 0.9.13 =
+Please upgrade. This version has improved thumbnail styling.
+
 
 == Changelog ==
+
+= 0.9.13 =
+Updated styling
+
 = 0.9.10 =
 Updated styling
 
