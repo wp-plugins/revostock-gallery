@@ -5,7 +5,7 @@ Requires at least: 3.1
 Tested up to: 3.2
 License: GPLv2 or later
 Plugin URI: http://revostock.com/wordpress.html
-Stable tag: 0.9.13
+Stable tag: 0.9.14
 
 
 Revostock gallery plugin display a gallery of media assets available for purchase. 
@@ -58,9 +58,6 @@ To get the most out of using our plug-in, make sure you sign up to be a RevoStoc
  - Mike Schinkel- Client engagement and high level architecture
  
  
-The Revostock gallery plugin allows authenticated Revostock users to display a gallery of Revostock assets (movies, audio, aftereffects) that are available for purchase.
-A thumbnail image and description are displayed for each assset. Hover over the image for a preview. Display of the gallery is controlled by shortcode arguments or default values specified on the plugin settings page.
-
 == Screenshots ==
 
 1. Plugin arguments. For example [revostock-gallery mediabox_id=29323] will return thumbnails for just those media assets listed in that mediabox (defined at Revostok.com)
@@ -70,11 +67,16 @@ A thumbnail image and description are displayed for each assset. Hover over the 
 
 
 == Upgrade Notice ==
-= 0.9.13 =
-Please upgrade. This version has improved thumbnail styling.
+= 0.9.14 =
+Please upgrade. Several small improvements.
 
 
 == Changelog ==
+
+= 0.9.14 =
+Updated styling
+Minor changes to admin page labels
+Fixed problem with some audio not playing
 
 = 0.9.13 =
 Updated styling

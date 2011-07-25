@@ -4,7 +4,7 @@
  * Plugin URI: http://www.revostock.com/wordpress
  * Description: Display clips from Revostock on your site
  * Text Domain: revostock_mediagallery
- * Version: 0.9.13
+ * Version:  0.9.14
  * Author: Revostock
  * Author URI: http://www.revostock.com/
  * License: GPLv2
@@ -109,14 +109,14 @@ if ( !class_exists( 'Revostock' ) ) {
 			add_settings_section( 'revostock-mediagallery-defaults', __('Shortcode Defaults', 'revostock_mediagallery'), array( __CLASS__, 'settings_defaults_section'), 'defaults' );
 			add_settings_field( 'revostock-mediagallery-defaults-scope', __('Producer', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_scope' ), 'defaults', 'revostock-mediagallery-defaults' );
 			add_settings_field( 'revostock-mediagallery-defaults-producer', __('Producer ID', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_producer' ), 'defaults', 'revostock-mediagallery-defaults' );
-			add_settings_field( 'revostock-mediagallery-defaults-columns', __('Columns', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_columns' ), 'defaults', 'revostock-mediagallery-defaults' );
+			// add_settings_field( 'revostock-mediagallery-defaults-columns', __('Columns', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_columns' ), 'defaults', 'revostock-mediagallery-defaults' );
 			add_settings_field( 'revostock-mediagallery-defaults-results-max', __('Limit media', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_limit_media' ), 'defaults', 'revostock-mediagallery-defaults' );
 			add_settings_field( 'revostock-mediagallery-defaults-css', __('Style sheet', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_css' ), 'defaults', 'revostock-mediagallery-defaults' );
 			add_settings_field( 'revostock-mediagallery-defaults-mediabox', __('Media Box', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_mediabox' ), 'defaults', 'revostock-mediagallery-defaults' );
 			add_settings_field( 'revostock-mediagallery-defaults-content-type', __('Return these media types', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_content_type' ), 'defaults', 'revostock-mediagallery-defaults' );
 			
 			add_settings_section( 'revostock-mediagallery-account', __('Revostock Account Credentials', 'revostock_mediagallery'), array( __CLASS__, 'settings_account_section'), 'account' );
-			add_settings_field( 'revostock-mediagallery-account-username', __('Account Username', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_accountusername' ), 'account', 'revostock-mediagallery-account' );
+			add_settings_field( 'revostock-mediagallery-account-username', __('Account Email', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_accountusername' ), 'account', 'revostock-mediagallery-account' );
 			add_settings_field( 'revostock-mediagallery-account-password', __('Account Password', 'revostock_mediagallery'), array( __CLASS__, 'settings_field_accountpassword' ), 'account', 'revostock-mediagallery-account' );
 		}
 		
@@ -253,7 +253,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			$checked = ( $defaults['scope'] == "producer" ) ? 'checked="checked" ' : '';
 			?>
 			<input id="revostock-mediagallery-defaults-scope" name="revostock_mediagallery_settings[_defaults][scope]" type="checkbox" <?php echo $checked; ?>/>
-			<span class="description"><?php _e('Show only my Revostock media assets', 'revostock_mediagallery')?></span>
+			<span class="description"><?php _e('If you would like to only display content from one producer, check here and enter the producer\'s ID below', 'revostock_mediagallery'); ?></span>
 			<?php 
 		}
 		
@@ -264,12 +264,14 @@ if ( !class_exists( 'Revostock' ) ) {
 			$defaults = self::get_shortcode_defaults();
 			?>
 			<input id="revostock-mediagallery-defaults-producer" name="revostock_mediagallery_settings[_defaults][producer_id]" size="10" type="text" value="<?php echo $defaults['producer_id'];?>" /><br />
-			<span class="description"><?php _e('The ID of the producer to show if the previous setting is active', 'revostock_mediagallery')?></span>
+			<span class="description"><?php _e('Enter a RevoStock Producer ID here (and check the box above) to limit the displayed results to items from this producer\'s portfolio.', 'revostock_mediagallery'); ?></span>
 			<?php 
 		}
 		
 		/*
 		 * Output revostock-mediagallery-defaults-columns settings_field
+		 * 
+		 * FIXME Deprecated.  Remove, and refactor code affected
 		 */
 		function settings_field_columns(){
 			$defaults = self::get_shortcode_defaults();
@@ -308,7 +310,11 @@ if ( !class_exists( 'Revostock' ) ) {
 			}
 			?>
 			&nbsp;<br /><label>CSS prefix  <input id="revostock-mediagallery-defaults-css" name="revostock_mediagallery_settings[_defaults][css_prefix]" type="text" size="25" value="<?php echo $defaults['css_prefix']; ?>" /></label><br />
-			<span class="description"><?php _e('Space-seperated class names to add to the gallery container', 'revostock_mediagallery'); ?></span>
+			<span class="description">
+				<?php _e('Space-seperated class names to add to the gallery container', 'revostock_mediagallery'); ?><br />
+				<?php _e('Use this prefix to create a CSS class in your WordPress stylesheet to control the container options for the plug-in (background color, border, etc.)', 'revostock_mediagallery'); ?><br />
+				<?php _e('Example: .myprefix {background-color: gray; border: solid 1px yellow;}', 'revostock_mediagallery'); ?>
+			</span>
 			<?php 
 		}
 		
@@ -332,7 +338,7 @@ if ( !class_exists( 'Revostock' ) ) {
 				"all" => "All",
 				"video" => "Video",
 				"audio" => "Audio",
-				"aftereffects" => "AfterEffects templates",
+				"ae" => "AfterEffects templates",
 				"motion" => "Apple Motion templates",
 			);
 			foreach ( $types as $key => $choice ){
@@ -362,7 +368,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			$opts = get_option( 'revostock_mediagallery_settings' );
 			?>
 			<input id="revostock-mediagallery-account-username" name="revostock_mediagallery_settings[_credentials][username]" size="40" type="text" value="<?php echo $opts['_credentials']['username']; ?>" /><br />
-			<span class="description">Your Revostock username</span>
+			<span class="description">Your Revostock user's email</span>
 			<?php 
 		}
 		
@@ -462,7 +468,7 @@ if ( !class_exists( 'Revostock' ) ) {
 			
 			$sane = array(
 				'scope' => FILTER_SANITIZE_STRING, // Values: all, producer
-				'asset_id' => FILTER_SANITZE_STRING, // Valid: int?
+				'asset_id' => FILTER_SANITIZE_STRING, // Valid: int?
 				'mediabox_id' => FILTER_SANITIZE_STRING,  // Valid: int?
 				'producer_id' => FILTER_SANITIZE_STRING, // Valid: int?
 				'search' => FILTER_SANITIZE_STRING, // Valid: strings
@@ -580,6 +586,8 @@ if ( !class_exists( 'Revostock' ) ) {
 		
 		/*
 		 * Ajax handler to fetch items and send to browser (wp_ajax_ callback)
+		 * 
+		 * FIXME "rows" deprecated...code refactoring should happen throughout here, stylesheets, elsewhere?
 		 */
 		function ajax_revostock_mediagallery_fetch_items(){
 			// Get our shortcode attributes passed by the AJAX call
@@ -636,7 +644,7 @@ if ( !class_exists( 'Revostock' ) ) {
 				$args[] .= 'producer_id='.$producer_id;
 			if ( !$search && $content_type && $content_type != 'all' )
 				$args[] = 'type='.$content_type;
-			if ( $group ) {
+			if ( isset($group) ) {
 				$order = 'order=';
 				switch ( $group ){
 					case 'newest':
@@ -687,7 +695,7 @@ if ( !class_exists( 'Revostock' ) ) {
 					'motion' => 'Apple Motion Template',
 				);
 				
-				// Loop based on max_results and columns
+				// Loop based on max_results and columns FIXME "rows" deprecated...code refactoring should happen throughout
 				for ( $i=0; $i<$limit_media; $i+=$columns ){
 					$row = array_slice( $results, $i, $columns );
 					$output .= '<div class="revostock-mediagallery-items-row">';
@@ -878,7 +886,7 @@ if ( !class_exists( 'Revostock' ) ) {
 				$parsed[ ( $data[$index]['tag'] ) ] = self::parse_feed( $data, $index );
 				self::parse_feed( $data, $index, $parsed );
 			} elseif ( $data[$index]['type'] == "complete" ) {
-				$parsed[ ( $data[$index]['tag'] ) ] = $data[$index]['value'];
+				$parsed[ ( $data[$index]['tag'] ) ] = ( isset( $data[$index]['value'] ) ) ? $data[$index]['value'] : '';
 				self::parse_feed( $data, $index, $parsed );
 				
 			}
