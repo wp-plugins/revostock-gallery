@@ -46,7 +46,7 @@ define( 'REVOSTOCK_GALLERY_PATH', WP_PLUGIN_DIR.'/'.basename( dirname( $revostoc
 //+++++++++ CONSTANTS +++++++++++++++++++++++
 define( 'REVOSTOCK_GALLERY_MIN_PHP', '5.2' );
 define( 'REVOSTOCK_GALLERY_MIN_WP', '3.2' );
-define( 'REVOSTOCK_GALLERY_VER', '1.0.0 pre-release' );
+define( 'REVOSTOCK_GALLERY_VER', '1.0.0' );
 //+++++++++++++++++++++++++++++++++++++++++++
 
 if ( ! class_exists( 'Revostock_Gallery' ) ) {
