@@ -1,0 +1,51 @@
+/*blue Revostock styling*/
+.revostock-gallery-item
+{
+	background: #004993;
+	border: 1px solid #FFCC00;
+	-moz-border-radius: 4px;
+}
+
+.revostock-gallery-item-thumbnail
+{
+	border: 1px solid #efefef;
+                 background: #C0C0C0;
+}
+.revostock-gallery-item-thumbnail a
+{
+	border-bottom: 0px solid #000000;
+	border: 0px solid #000000;
+}
+.revostock-gallery-item-thumbnail img
+{
+	border: 7px solid #FFFFFF;
+}
+.revostock-gallery-item a img
+{
+	background: #800000;
+	border-color: #efefef;
+}
+.revostock-gallery-item-title a:hover
+{
+	color: #FFFFFF;
+}
+.revostock-gallery-item-title a
+{
+	color: #FFFFFF;
+}
+div.revostock-gallery-item-producer a
+{
+	color: #FFFFFF;
+}
+.revostock-gallery-item-type
+{
+	background-color: #000033;
+}
+.revostock-gallery-item-media-icon
+{
+	border: 0px solid #008000;
+}
+.revostock-gallery-item-type-label
+{
+	color: #FFFFFF;
+}
