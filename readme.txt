@@ -92,12 +92,6 @@ and password registered at RevoStock.com as well as API authorization.
 5. Gallery display on page
 
 
-
-== Upgrade Notice ==
-= 1.0.0 =
-This is a significant release. Please upgrade.
-
-
 == Changelog ==
 = 1.0.0 =
 * Rewritten core
@@ -118,3 +112,7 @@ Updated styling
 
 = 0.5 =
 Initial beta release
+
+== Upgrade Notice ==
+= 1.0.0 =
+This is a significant release. Please upgrade.
