@@ -3,7 +3,7 @@
  * Plugin Name: RevoStock Media Gallery
  * Plugin URI: http://www.revostock.com/wordpress
  * Description: Display a gallery of RevoStock.com media files available for purchase
- * Version:  1.0.0 pre-release
+ * Version:  1.0.0 
  * Author: RevoStock
  * Author URI: http://www.revostock.com/
  * Text Domain: revostock-gallery
