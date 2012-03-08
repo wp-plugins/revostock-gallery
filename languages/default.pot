@@ -1,0 +1,315 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: RevoStock Media Gallery for WordPress 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-30 16:33-0500\n"
+"PO-Revision-Date: 2012-01-30 16:33-0500\n"
+"Last-Translator: Naomi C. Bush <hello@naomicbush.com>\n"
+"Language-Team: RevoStock\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e;esc_attr__;esc_html__;sprintf;esc_attr_e;esc_html_e;printf\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /Users/naomibush/Dev/projects/Mike/revostock-gallery\n"
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:218
+msgid "RevoStock Gallery Admin"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:218
+msgid "RevoStock Gallery"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:238
+msgid "Using the Shortcode"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:241
+msgid "Shortcode Defaults"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:242
+msgid "Mediabox"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:243
+msgid "Producer"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:244
+msgid "Types"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:245
+msgid "Maximum Results"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:246
+msgid "Color Scheme"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:249
+msgid "RevoStock Account Credentials"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:250
+msgid "Account Email"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:251
+msgid "Account Password"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:272
+msgid "You do not have sufficient privileges to access this page."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:280
+msgid "RevoStock Media Gallery"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:285
+msgid "You must have an account with RevoStock to use this plugin.  Please enter your credentials."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:306
+msgid "Save Changes"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:311
+msgid "Reset Defaults"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:317
+msgid "Clear info"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:358
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:401
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:393
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:396
+msgid "Welcome to RevoStock Admin Gallery for WordPress! "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:398
+msgid ""
+"This plugin allows you to insert a gallery of RevoStock media items (video, audio,\n"
+"\t\t\t\t\tAfterEffects templates, Apple Motion templates) into your posts or pages, using\n"
+"\t\t\t\t\tthe shortcode"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:402
+msgid "or by clicking on the RevoStock star"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:404
+msgid "on the post editor."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:405
+msgid "First, set your"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:406
+msgid "Default"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:407
+msgid "settings."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:411
+msgid "You can override the "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:412
+msgid "default settings"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:413
+msgid ""
+"for any particular shortcode using the attributes below - or just selecting your desired option from the\n"
+"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tRevoStock star on the post editor."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:500
+msgid "Have feedback? Need help?"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:503
+msgid "Contact Support"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:503
+#, php-format
+msgid "<a id=\"revostock-support-button\" class=\"button-primary revostock-banner-button\" target=\"_blank\" href=\"%1$s\">%2$s</a>"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:520
+msgid "Want to earn more? "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:521
+msgid "Join "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:523
+msgid " today."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:526
+msgid "Join"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:526
+#, php-format
+msgid "<a id=\"revostock-affiliate-button\" class=\"button-primary revostock-banner-button\" target=\"_blank\" href=\"%1$s\">%2$s</a>"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:545
+msgid "RevoStock Media Gallery for WordPress "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:546
+msgid "Support"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:559
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:584
+msgid "You are not authorized to change settings for this plugin."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:564
+msgid "Shortcode Defaults "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:566
+msgid ""
+"These are the default options your shortcode will use if no other attributes are provided. You can always\n"
+"\t\t\t\t\t\toverride these default values with the attributes explained"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:568
+msgid "here"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:569
+msgid "or by clicking on the RevoStock star on the post editor."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:590
+msgid "The RevoStock Media Gallery plugin <strong>requires"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:592
+msgid "a user account"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:595
+msgid "Get your account"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:595
+#, php-format
+msgid "<a id=\"revostock-getyouraccount\" class=\"button-primary\" target=\"_blank\" href=\"%1$s\">%2$s</a>"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:601
+msgid "API access"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:604
+msgid "Get your API access"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:604
+#, php-format
+msgid "<a id=\"revostock-getyouraccess\" class=\"button-primary\" target=\"_blank\" href=\"%1$s\">%2$s</a>"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:612
+msgid "Already have a RevoStock account <em>with API access</em>?"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:613
+msgid "Enter your credentials below:"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:630
+msgid "Unique numeric ID of the RevoStock producer you'd like to display from"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:645
+msgid "Enter a number from 1 to 40"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:671
+msgid "CSS prefix "
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:673
+msgid " Space-separated class names to add to the gallery container"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:674
+msgid "You can use this prefix in your WordPress stylesheet to customize the gallery display (background color, border, etc.)"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:675
+msgid "Example: .myprefix {background-color: gray; border: solid 1px yellow;}"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:690
+msgid "Unique numeric ID of the RevoStock mediabox to display from"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:729
+msgid "Your RevoStock user email"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:744
+msgid "Your RevoStock password"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:764
+msgid "You do not have sufficient priviledges to do that."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:787
+msgid "You must enter both a username and a password"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:822
+#, php-format
+msgid "You need to enter a valid value for \"%s\"."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:868
+msgid "There is a problem with your account. Please check settings."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:1254
+msgid "No media items found."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:1288
+msgid "Your username and password combination were not recognized by RevoStock"
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:1295
+msgid "There was a problem reaching RevoStock.<br />Please try again later or contact your site administrator."
+msgstr ""
+
+#: /Users/naomibush/Dev/projects/Mike/revostock-gallery/revostock-gallery.php:1299
+msgid "Something went wrong"
+msgstr ""
+
