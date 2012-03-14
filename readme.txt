@@ -23,7 +23,7 @@ Requires WordPress 3.1 *and* PHP 5.2
 
 **How-to video:**
 
-[youtube http://youtu.be/6WL3CSioEyA]
+[youtube http://www.youtube.com/watch?v=6WL3CSioEyA]
 
 **Current gallery display options**
 
