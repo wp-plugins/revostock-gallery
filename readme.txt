@@ -23,7 +23,7 @@ Requires WordPress 3.1 *and* PHP 5.2
 
 ### How-to video:###
 
-[youtube http://www.youtube.com/watch?v=6WL3CSioEyA]
+[youtube=http://www.youtube.com/watch?v=6WL3CSioEyA]
 
 **Current gallery display options**
 
@@ -62,7 +62,7 @@ Also, you can earn more by joining "Share the Revo"
 http://www.revostock.com/Affiliate.html
 
 Video:
-[http://www.youtube.com/watch?v=6WL3CSioEyA]
+[youtube=http://www.youtube.com/watch?v=6WL3CSioEyA]
 
 
 = I've installed the plugin, placed the [revostock-gallery] shortcode into a post but I'm receiving a "There is a problem with your account. Please check settings" message displayed in the post =
