@@ -21,7 +21,7 @@ Choose from one of the four bundled color schemes (black-and-white, grey, red, b
 
 Requires WordPress 3.1 *and* PHP 5.2
 
-**How-to video:**
+### How-to video:###
 
 [youtube http://www.youtube.com/watch?v=6WL3CSioEyA]
 
