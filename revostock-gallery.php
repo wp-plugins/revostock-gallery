@@ -3,7 +3,7 @@
  * Plugin Name: RevoStock Media Gallery
  * Plugin URI: http://www.revostock.com/wordpress
  * Description: Display a gallery of RevoStock.com media files available for purchase
- * Version:  1.0.0 
+ * Version:  1.1.0
  * Author: RevoStock
  * Author URI: http://www.revostock.com/
  * Text Domain: revostock-gallery
@@ -805,7 +805,10 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 				$settings = shortcode_atts( $defaults, $attr );
 				$results = self::get_new_media( $settings );
 
-				$display = '<div class="revostock-gallery-container ' . sanitize_html_class( $settings[ 'css_prefix' ] ) . '">';
+
+         $display = '<div id="coord_display"></div>';
+				$display .= '<div class="revostock-gallery-container ' . sanitize_html_class( $settings[ 'css_prefix' ] ) . '">';
+
 				$display .= self::output_items( $results, self::sanitize_and_remove_empty( $settings ) );
 				$display .= '</div>';
 
@@ -1115,7 +1118,7 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 					'motion'=> 'Apple Motion Template',
 				);
 
-				$preview_base = 'http://www.revostock.com/popupplugin.php';
+				$preview_base = 'http://www.revostock.com/popuppluginlarge.php';
 
 				// Loop based on max_results and columns FIXME "rows" deprecated...code refactoring should happen throughout
 				for ( $i = 0; $i < $max_results; $i += $columns ) {
@@ -1177,26 +1180,26 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 						}
 
 						// Item link
-						$itemlink = '<a target="_blank" href="'.$item['ProductURL'].'">';
+						$itemlink = '<a rel="nofollow" target="_blank" href="'.$item['ProductURL'].'">';
 
 						// Producer link
-						$producerlink = '<a target="_blank" href="http://www.revostock.com/ViewProfile.html?&amp;ID='.$item['Producer']['ID'].'">';
+						$producerlink = '<a rel="nofollow" target="_blank" href="http://www.revostock.com/ViewProfile.html?&amp;ID='.$item['Producer']['ID'].'">';
 
 						// Shorten the title and producer names and add a ...
-						$itemshortname = substr( $item['Title'], 0, 23 );
-						if ( strlen($item['Title'] ) > 23 )
+						$itemshortname = substr( $item['Title'], 0, 34 );
+						if ( strlen($item['Title'] ) > 34 )
 							$itemshortname .='...';
 
-						$producershortname =  substr( $item['Producer']['username'], 0, 23 );
-						if ( strlen( $item['Producer']['username'] ) > 23 )
+						$producershortname =  substr( $item['Producer']['username'], 0, 17 );
+						if ( strlen( $item['Producer']['username'] ) > 17 )
 							$producershortname .= '...';
 
 						$preview_url = $preview_base . '?ID=' . $item['ID'];
-
+						$loader_url = plugins_url( 'images/', REVOSTOCK_GALLERY_FILE ).'ajax-loadersmall.gif';
 						// item container
 						$output .= '<div id="item-'.$item['ID'].'" class="revostock-gallery-item">';
 
-						$output .= '<div class="revostock-gallery-item-thumbnail">'.$itemlink.'<img src="'.$item['ThumbURL'].'" alt="'.$itemshortname.'" onmouseover="showhover(\'' . $preview_url .'\');" onmouseout="hidetrail();" /></a></div>';
+						$output .= '<div class="revostock-gallery-item-thumbnail">'.$itemlink.'<img src="'.$item['ThumbURL'].'" alt="'.$itemshortname.'" onmouseover="showhover(\'' . $preview_url .'\',\'' . $item['FileType'] .'\',\'' . $item['Format']['ID'] .'\',\'' . $loader_url .'\');" onmouseout="hidetrail();" /></a></div>';
 						$output .= '<div class="revostock-gallery-item-description revostock-gallery-clear">';
 						$output .= '<div class="revostock-gallery-item-title"><div>'.$itemlink.$itemshortname.'</a></div></div>';
 						$output .= '<div class="revostock-gallery-item-producer"><div>'.$producerlink.'By&nbsp;'.$producershortname.'</a></div></div>';

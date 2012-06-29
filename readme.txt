@@ -1,11 +1,11 @@
 === RevoStock Media Gallery ===
-Contributors: NewClarity, NaomiCBush, cshepherd, MikeSchinkel, marnafriedman
+Contributors: NewClarity, RevoStock
 Tags: revostock, video, audio, aftereffects
 Requires at least: 3.2
-Tested up to: 3.3
+Tested up to: 3.4
 License: GPLv2 or later
 Plugin URI: http://revostock.com/wordpress.html
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 
 
 The RevoStock Media Gallery plugin displays a gallery of media assets available for purchase from RevoStock.com.
@@ -21,7 +21,7 @@ Choose from one of the four bundled color schemes (black-and-white, grey, red, b
 
 Requires WordPress 3.1 *and* PHP 5.2
 
-### How-to video###
+### How-to video:###
 
 [youtube=http://www.youtube.com/watch?v=6WL3CSioEyA]
 
@@ -52,9 +52,9 @@ or simply use the button on the editor which inserts the shortcode and arguments
 = How do I get started? =
 The RevoStock Media Gallery plugin requires
 
-* a RevoStock user account (it's free!) - http://www.revostock.com/RegMember.html
+* A RevoStock user account (it's free!) - http://www.revostock.com/RegMember.html
 
-* API access - after logging in to RevoStock, visit: www.revostock.com/api.html
+* API access - after logging in to RevoStock, visit: http://www.revostock.com/api.html
 
 Currently, API authorization is only available to RevoStock Producers (users who sell content through RevoStock) but will be open to all members soon.
 
@@ -76,11 +76,13 @@ and password registered at RevoStock.com as well as API authorization.
  - Ask questions or report bugs at [http://www.revostock.com/Helpdesk.html](http://www.revostock.com/Helpdesk.html),
 
 = Who developed this plugin? =
- - Naomi C. Bush- Ongoing Development
- - Sean Leonard- Initial Development
- - Carol Shepherd- Technical project management, wireframes
- - Marna Friedman- QA and Project management
- - Mike Schinkel- Client engagement and high level architecture
+ - [http://profiles.wordpress.org/satsura/](Valara Satsura) - 1.1 Development
+ - Craig Lillard - 1.1 Development
+ - [http://profiles.wordpress.org/mikeschinkel/](Naomi C. Bush) - 1.0 Development
+ - [http://profiles.wordpress.org/Meanderingcode/](Sean Leonard) - Pre-release Development
+ - [http://profiles.wordpress.org/cshepherd/](Carol Shepherd) - Technical project management, wireframes
+ - [http://profiles.wordpress.org/marnafriedman/](Marna Friedman) - QA and Project management
+ - [http://profiles.wordpress.org/mikeschinkel/](Mike Schinkel) - Client engagement and high-level architecture
 
 
 == Screenshots ==
@@ -93,6 +95,13 @@ and password registered at RevoStock.com as well as API authorization.
 
 
 == Changelog ==
+= 1.1.0 =
+* Updated styling
+* Fixed problems with popup window overflow
+* Added rel=nofollow to links (http://support.google.com/webmasters/bin/answer.py?hl=en&answer=96569)
+* Made the iframe bigger to accomodate varying sizes of videos playing.
+* Checked compatibility with Wordpress 3.4
+
 = 1.0.0 =
 * Rewritten core
 * Redesigned admin interface
