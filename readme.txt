@@ -2,7 +2,7 @@
 Contributors: NewClarity, RevoStock
 Tags: revostock, video, audio, aftereffects
 Requires at least: 3.2
-Tested up to: 3.4
+Tested up to: 3.4.1
 License: GPLv2 or later
 Plugin URI: http://revostock.com/wordpress.html
 Stable tag: 1.1.0
@@ -76,13 +76,13 @@ and password registered at RevoStock.com as well as API authorization.
  - Ask questions or report bugs at [http://www.revostock.com/Helpdesk.html](http://www.revostock.com/Helpdesk.html),
 
 = Who developed this plugin? =
- - [http://profiles.wordpress.org/satsura/](Valara Satsura) - 1.1 Development
+ - <a href="http://profiles.wordpress.org/satsura/">Valara Satsura</a> - 1.1 Development
  - Craig Lillard - 1.1 Development
- - [http://profiles.wordpress.org/mikeschinkel/](Naomi C. Bush) - 1.0 Development
- - [http://profiles.wordpress.org/Meanderingcode/](Sean Leonard) - Pre-release Development
- - [http://profiles.wordpress.org/cshepherd/](Carol Shepherd) - Technical project management, wireframes
- - [http://profiles.wordpress.org/marnafriedman/](Marna Friedman) - QA and Project management
- - [http://profiles.wordpress.org/mikeschinkel/](Mike Schinkel) - Client engagement and high-level architecture
+ - <a href="http://profiles.wordpress.org/mikeschinkel/">Naomi C. Bush</a> - 1.0 Development
+ - <a href="http://profiles.wordpress.org/Meanderingcode/">Sean Leonard</a> - Pre-release Development
+ - <a href="http://profiles.wordpress.org/cshepherd/">Carol Shepherd</a> - Technical project management, wireframes
+ - <a href="http://profiles.wordpress.org/marnafriedman/">Marna Friedman</a> - QA and Project management
+ - <a href="http://profiles.wordpress.org/mikeschinkel/">Mike Schinkel</a> - Client engagement and high-level architecture
 
 
 == Screenshots ==
@@ -100,7 +100,7 @@ and password registered at RevoStock.com as well as API authorization.
 * Fixed problems with popup window overflow
 * Added rel=nofollow to links (http://support.google.com/webmasters/bin/answer.py?hl=en&answer=96569)
 * Made the iframe bigger to accomodate varying sizes of videos playing.
-* Checked compatibility with Wordpress 3.4
+* Checked compatibility with Wordpress 3.4.1
 
 = 1.0.0 =
 * Rewritten core
