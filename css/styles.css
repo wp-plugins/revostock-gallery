@@ -1,0 +1,133 @@
+/*Revsostock plugin styling*/
+.revostock-gallery-container{
+	clear: both;
+	padding: 20px;
+}
+.revostock-gallery-items-row{
+	clear: both;
+}
+.revostock-gallery-item{
+	width: 145px;
+	height: 175px;
+	float: left;
+	margin: 10px;
+	padding: 5px 5px 0px 5px;
+	min-height: 10px;
+	margin-left: 5px;
+	margin-bottom: 1px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	position: relative;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	-moz-box-shadow:1px 1px 2px 0 #666666;
+	-webkit-box-shadow:1px 1px 2px 0 #666666;
+	box-shadow:1px 1px 2px 0 #666666;
+}
+.revostock-gallery-item-thumbnail{
+	width: 133px;
+	margin: 0 auto;
+	max-height: 80px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 6px;
+	-moz-box-shadow:0.5px 0.5px 3px 0.3px #999999 inset;
+	-webkit-box-shadow:0.5px 0.5px 3px 0.3px #999999 inset;
+	box-shadow:0.5px 0.5px 3px 0.3px #999999 inset;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+}
+.revostock-gallery-item-description{
+vertical-align: middle;
+height: 50px;
+width: 138px;
+}
+.revostock-gallery-item-thumbnail IMG{
+	min-width: 130px;
+	clear: both;
+}
+.popup{
+	  padding: 0px; background-repeat:no-repeat; background-position: 0 0;
+
+}
+.revostock-gallery-item-thumbnail A IMG{
+	border-width: 1px;
+	border-style: solid;
+	max-height: 75px;
+	max-width: 130px;
+}
+.revostock-gallery-item-title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	width: 100%;
+	margin-top: 3px;
+	/*overflow: hidden;*/
+	text-transform: capitalize;
+	font-weight: bold;
+	line-height: 15px;
+	letter-spacing: -1px;
+}
+.revostock-gallery-item-title A{
+	width: auto;
+	text-decoration: none;
+}
+.revostock-gallery-item-title DIV{
+	padding-left: 5px;
+	width: auto;
+	max-height: 32pt;
+}
+.revostock-gallery-item-producer{
+	width: auto;
+	overflow: hidden;
+	font-size: 11px;
+	letter-spacing: -.2px;
+}
+DIV.revostock-gallery-item-producer A{
+	text-decoration: none;
+	margin-right: 0;
+	margin-left: 5px;
+}
+.revostock-gallery-item-producer DIV{
+	width: 500px;
+}
+.revostock-gallery-item-asset-specifics{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7.5pt;
+	float: left;
+	clear: both;
+	width: 143px;
+	line-height: 100%;
+	text-align: right;
+	margin-top: -15px;
+}
+.revostock-gallery-item-type{
+	height: 25px;
+	width: 168px;
+	padding-top: 4px;
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.revostock-gallery-item-type IMG{
+	float: left;
+}
+.revostock-gallery-item-media-icon{
+	padding: 0px 0px 0px 10px;
+}
+.revostock-gallery-item-type-label{
+	float: left;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	margin-left: 2px;
+	margin-right: 13px;
+	margin-top: 4px;
+}
+.revostock-gallery-clear{
+	clear: both;
+}

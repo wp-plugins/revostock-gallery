@@ -5,7 +5,7 @@ Requires at least: 3.2
 Tested up to: 3.4.1
 License: GPLv2 or later
 Plugin URI: http://revostock.com/wordpress.html
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 
 
 The RevoStock Media Gallery plugin displays a gallery of media assets available for purchase from RevoStock.com.
@@ -95,6 +95,10 @@ and password registered at RevoStock.com as well as API authorization.
 
 
 == Changelog ==
+= 1.1.1 =
+* Fixed problems with popups not displaying large enough in some cases.
+* Shortened names of CSS files.
+
 = 1.1.0 =
 * Updated styling
 * Fixed problems with popup window overflow

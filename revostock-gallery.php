@@ -3,7 +3,7 @@
  * Plugin Name: RevoStock Media Gallery
  * Plugin URI: http://www.revostock.com/wordpress
  * Description: Display a gallery of RevoStock.com media files available for purchase
- * Version:  1.1.0
+ * Version:  1.1.1
  * Author: RevoStock
  * Author URI: http://www.revostock.com/
  * Text Domain: revostock-gallery
@@ -46,7 +46,7 @@ define( 'REVOSTOCK_GALLERY_PATH', WP_PLUGIN_DIR.'/'.basename( dirname( $revostoc
 //+++++++++ CONSTANTS +++++++++++++++++++++++
 define( 'REVOSTOCK_GALLERY_MIN_PHP', '5.2' );
 define( 'REVOSTOCK_GALLERY_MIN_WP', '3.2' );
-define( 'REVOSTOCK_GALLERY_VER', '1.0.0' );
+define( 'REVOSTOCK_GALLERY_VER', '1.1.1' );
 //+++++++++++++++++++++++++++++++++++++++++++
 
 if ( ! class_exists( 'Revostock_Gallery' ) ) {
@@ -179,9 +179,9 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 		}
 
 		static function wp_print_styles() {
-			wp_enqueue_style( 'revostock_gallery_stylesheet', plugins_url( 'css/revostock-gallery-content.css', REVOSTOCK_GALLERY_FILE ) );
+			wp_enqueue_style( 'revostock_gallery_stylesheet', plugins_url( 'css/styles.css', REVOSTOCK_GALLERY_FILE ) );
 			$settings = self::get_shortcode_defaults();
-			wp_enqueue_style( 'revostock_gallery_stylesheet-colors', plugins_url( 'css', REVOSTOCK_GALLERY_FILE ).'/revostock-gallery-content-'.$settings['color_scheme'].'.css', array( 'revostock_gallery_stylesheet' ) );
+			wp_enqueue_style( 'revostock_gallery_stylesheet-colors', plugins_url( 'css', REVOSTOCK_GALLERY_FILE ).'/styles-'.$settings['color_scheme'].'.css', array( 'revostock_gallery_stylesheet' ) );
 		}
 		/********** END INITIAL SETUP ***************/
 
@@ -335,7 +335,7 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 		 *
 		 */
 		static function admin_print_styles() {
-			wp_enqueue_style( 'revostock_gallery_admin_style', plugins_url( 'css/revostock-gallery-admin.css', REVOSTOCK_GALLERY_FILE ) );
+			wp_enqueue_style( 'revostock_gallery_admin_style', plugins_url( 'css/admin-styles.css', REVOSTOCK_GALLERY_FILE ) );
 		}
 
 		/*++++++++++++ SECTIONS & FIELDS ++++++++++++*/
@@ -1017,8 +1017,7 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 		 * @return string
 		 */
 		static function build_request( $settings ) {
-
-			$settings = self::sanitize_and_remove_empty( $settings );
+			$request = '';
 
 			extract( $settings ); //remove & reference variables through settings array
 
@@ -1041,6 +1040,7 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 						$request .= '-motion/';
 						break;
 					case 'all':
+					default:
 						$request .= '/';
 						break;
 				}
@@ -1058,7 +1058,7 @@ if ( ! class_exists( 'Revostock_Gallery' ) ) {
 				$args[] .= 'producer_id='.$producer;
 			if ( ! $search_terms && $type && $type != 'all' )
 				$args[] = 'type='.$type;
-			if ( isset($group) ) {
+			if ( $group ) {
 				$order = 'order=';
 				switch ( $group ) {
 					case 'newest':
